@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="books-container">
+        @for (item of images; track $index) {
+            <div class="book-card">
+                <img [src]="item.src" [alt]="item.src">
+                <div class="card-content">
+                    <p class="title">{{item.name}}</p>
+                    <p class="author">{{item.id_image}}</p>
+                </div>
+                <div>
+                    <button class="btn btn-danger">ELIMINAR</button>
+                </div>
+            </div>
+        }
+    </div>
+    @if(images.length==0){
+        <div class="not-found">
+            Agrega un nuevito articulito para tu inventarito
+        </div>
+
+    }
+</div>
